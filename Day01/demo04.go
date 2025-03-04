@@ -8,7 +8,7 @@ func main() {
 	name := "asus"
 	fmt.Println(name)
 
-	age := 18
+	age := 181
 	//语法糖（简化开发）
 	//:= 相当于快速定义变量 如果赋值了，那么会自动推导
 	fmt.Println(age)

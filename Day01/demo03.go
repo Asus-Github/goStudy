@@ -13,7 +13,7 @@ func main() {
 		age2  int
 	)
 
-	name = "刘华硕"
+	name = "刘华硕123"
 	// ctrl + d 自动在下一行生成当前行
 	fmt.Println(name)
 	fmt.Println(name2)
