@@ -13,5 +13,5 @@ func main() {
 	for {
 		//死循环
 	}
-	fmt.Println("test for end！")
+	fmt.Println("test for end！！！")
 }
