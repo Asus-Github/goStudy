@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// go build xxx.go 生成.exe文件  注意正反斜杠同步！.\demo21.go
 func main() {
 	//练习：if的练习
 
