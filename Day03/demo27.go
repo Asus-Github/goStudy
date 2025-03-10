@@ -4,14 +4,14 @@ import "fmt"
 
 func main() {
 
-	a, _ := swap("p1", "p2")
+	a, _, b := swap("p1", "p2")
 
-	fmt.Println(a)
+	fmt.Println(a, b)
 
 }
 
-func swap(str1 string, str2 string) (string, string) {
+func swap(str1 string, str2 string) (string, string, string) {
 
-	return str2, str1
+	return str2, str1, "test"
 
 }
