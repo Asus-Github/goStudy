@@ -20,5 +20,5 @@ func main() {
 
 // 可变参数也是要有变量名字的 str[] 用数组下表取参0~len(str)-1
 func d(num1, num2 int, str ...string) int {
-	return 11
+	return 111
 }
