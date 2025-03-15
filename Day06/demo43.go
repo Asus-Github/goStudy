@@ -40,4 +40,13 @@ func main() {
 	newSlice := make([]int, 3, 5) //len = 3
 	copy(newSlice, s2)
 	fmt.Println(newSlice) //[1 2 3] copy很安全，只会copy设定长度的数组，并不会扩容
+
+	/*
+		深拷贝:拷贝是数据的本身
+		值类型的数据，默认都是深拷贝，array、int、float、string、bool、struct....
+		浅拷贝:拷贝是数据的地址，会导致多个变量指向同一块内存。
+		引用类型的数据: slice、map
+		因为切片是引用类的数据，直接拷贝的是这个地址
+		copy实现的是深拷贝
+	*/
 }
