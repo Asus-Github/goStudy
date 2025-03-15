@@ -36,7 +36,8 @@ func main() {
 	arr[2] = 666
 	fmt.Println(s1)
 
-	newSlice := make([]int, 3, 5) //
-	copy(newSlice, s1)
-	fmt.Println(newSlice)
+	s2 := []int{1, 2, 3, 4, 5, 6, 7, 8}
+	newSlice := make([]int, 3, 5) //len = 3
+	copy(newSlice, s2)
+	fmt.Println(newSlice) //[1 2 3] copy很安全，只会copy设定长度的数组，并不会扩容
 }
