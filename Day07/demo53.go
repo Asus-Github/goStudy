@@ -10,7 +10,7 @@ func main() {
 	c := 3
 	d := 4
 
-	var ptrArr = [4]*int{&a, &b, &c, &d} //*int是一个指针类型，变成指针数组只需要在前面加上个数[size] 即可
+	var ptrArr = [4]*int{&a, &b, &c, &d} //*int是一个指针类型，变成指针数组只需要在前面加上个数[size] 即可 ⭐区分数组指针 ptr = *[size]arr    [size]arr是数组，加个*表示数组的指针
 
 	//通过指针数组修改数值
 	fmt.Printf("a变量的地址为：%p\n", ptrArr[0])
