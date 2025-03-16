@@ -15,6 +15,7 @@ func main() {
 	fmt.Println(s1)
 
 	var teacher = Teacher{"asus", 18}
+	//teacher:=Teacher{"asus", 18}
 	// 如何打印这个匿名字段，默认使用数据类型当做字段名称
 	fmt.Println(teacher.string, teacher.int)
 }
