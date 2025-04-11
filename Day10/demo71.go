@@ -31,3 +31,8 @@ func testPanic(num int) {
 	}
 	fmt.Println("msg - 4")
 }
+
+/*
+为什么 recover() 能拿到 panic() 抛出的信息？
+因为 Go 语言的 panic() 和 recover() 是一对“协作机制”，它们被设计成专门用于错误传递 + 捕获的。
+*/
