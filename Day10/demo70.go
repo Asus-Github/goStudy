@@ -34,5 +34,15 @@ func test(i int) (int, error) {
 }
 func main() {
 	re, err := test(1)
+	if err != nil {
+		fmt.Println(err)
+		e, ok := err.(*myError) //类型断言 x.(T) 是 Go 语言原生提供的语法机制
+		/*
+			尝试把接口变量 err 转换成 *myError 类型，如果成功就赋值给 e，并且 ok == true；如果失败，e 为 nil，ok == false。
+			可以理解为检验是否是*myError类型
+		*/
+		fmt.Println(e, ok)
+		return
+	}
 	fmt.Println(re, err)
 }
