@@ -37,7 +37,7 @@ func main() {
 		fmt.Println("找到了mp3文件")
 	}
 	// 8、拼接字符串, 数组或者切片拼接 ，前端给了我们多个参数。保存为一个字符串
-	// Join()
+	// Join()⭐
 	str1 := []string{"I", "am", "a", "boy"}
 	fmt.Println(strings.Join(str1, " "))
 
