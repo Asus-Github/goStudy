@@ -12,6 +12,15 @@ func main() {
 }
 
 func testPanic(num int) {
+	defer func() { //推入 defer 栈，尚未执行，捕捉panic
+		if msg := recover(); msg != nil { // recover func recover() any 返回panic传递的值
+			fmt.Println("recover执行了... panic msg:", msg)
+			// 处理逻辑
+			fmt.Println("---------程序已恢复----------")
+		}
+	}()
+	//msg := recover()
+	//fmt.Println(msg)
 	defer fmt.Println("msg - 1")
 	defer fmt.Println("msg - 2")
 	fmt.Println("msg - 3")
