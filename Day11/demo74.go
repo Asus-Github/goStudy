@@ -21,6 +21,8 @@ func main() {
 	fmt.Printf("%T %s\n", s3, s3)
 
 	s4 := "10000"
+	// 整数： 数字、进制、大小
+	// 参数：1、str   2、 进制（10）  3、大小
 	num, err := strconv.ParseInt(s4, 10, 64)
 	if err != nil {
 		fmt.Println(err)
