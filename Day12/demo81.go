@@ -40,4 +40,17 @@ func main() {
 	fmt.Println(string(bs[:n]))
 	fmt.Println(n)
 	fmt.Println(err)
+	/*
+
+		utils.Copy(source, dest, 1024) 是啥？
+		虽然 utils.Copy 不是 Go 标准库的函数，应该是你项目自定义的工具函数，但它很可能实现了文件复制或者流数据复制功能，类似下面这种封装：
+		✅ 参数 1024 是什么意思？
+		这个就是传入的 bufSize，表示：
+			每次从 source 读取和写入到 dest 的最大字节数是 1024 字节（即 1KB）
+			🔍 为什么要用缓冲区？⭐⭐⭐
+			避免一次性读/写占用过多内存
+			控制内存使用（比如用于大文件时）
+			提高效率（读写固定大小通常更快）
+
+	*/
 }
