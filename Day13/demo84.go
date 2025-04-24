@@ -32,7 +32,7 @@ func saleTicket(name string) {
 		mutex.Lock()
 		if ticketTotal > 0 {
 			ticketTotal--
-			time.Sleep(time.Millisecond * 1)
+			time.Sleep(time.Millisecond * 1) //如果不加这个，可能其他goroutine得不到服务，只被一个goroutine买完了
 			fmt.Println(name, "抢到一张票， 剩余：", ticketTotal)
 			mutex.Unlock()
 		} else {
