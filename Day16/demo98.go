@@ -8,7 +8,7 @@ import (
 func main() {
 	//请求处理函数
 	http.HandleFunc("/hello", hello)
-
+	http.HandleFunc("/login", login)
 	//放在最后监听端口
 	http.ListenAndServe("localhost:8080", nil)
 
@@ -41,4 +41,23 @@ func hello(resp http.ResponseWriter, req *http.Request) {
 		8080	你写的服务器监听的端口
 	*/
 	resp.Write([]byte("hello world"))
+}
+
+func login(resp http.ResponseWriter, req *http.Request) {
+
+	mysqlUsername := "asus"
+	mysqlPassword := "123456"
+	fmt.Println("接收到了客户端请求！")
+	reqData := req.URL.Query()
+	username := reqData.Get("username")
+	password := reqData.Get("password")
+
+	if username != mysqlUsername || password != mysqlPassword {
+		resp.Write([]byte("请重新输入账号密码！"))
+		return
+	} else {
+		resp.Write([]byte("ok！登陆成功！"))
+		return
+	}
+
 }
