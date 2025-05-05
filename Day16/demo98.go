@@ -9,6 +9,7 @@ func main() {
 	//请求处理函数
 	http.HandleFunc("/hello", hello)
 	http.HandleFunc("/login", login)
+	http.HandleFunc("/register", register)
 	//放在最后监听端口
 	http.ListenAndServe("localhost:8080", nil)
 
@@ -61,3 +62,22 @@ func login(resp http.ResponseWriter, req *http.Request) {
 	}
 
 }
+
+func register(resp http.ResponseWriter, req *http.Request) {
+	fmt.Println("接收到了register请求！")
+	req.ParseForm() //⭐
+	username := req.PostForm.Get("username")
+	password := req.PostForm.Get("password")
+	fmt.Println(username, password)
+	fmt.Println(req.FormValue("username"))
+}
+
+/*
+| 方式                       | 是否需要手动调用 `ParseForm()` |
+| ------------------------- | --------------------- -  |
+| `req.FormValue("key")`    | **不需要**                |
+| `req.PostForm.Get("key")` | **需要**                 |
+| `req.Form.Get("key")`     | **需要**                 |
+
+
+*/
